@@ -1,7 +1,8 @@
 import asyncio
-from asyncio import Future, AbstractEventLoop
+from asyncio import AbstractEventLoop, Future
 from concurrent.futures import InterpreterPoolExecutor
 from time import time
+
 from helper import square
 
 

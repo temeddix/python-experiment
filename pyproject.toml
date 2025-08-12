@@ -8,3 +8,6 @@ dependencies = []
 
 [tool.pyright]
 typeCheckingMode = "strict"
+
+[tool.ruff]
+extend-select = ["N", "I", "RUF", "SLF", "INP", "ASYNC"]
