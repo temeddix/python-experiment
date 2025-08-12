@@ -5,6 +5,8 @@ from time import time
 
 from helper import square
 
+TASK_COUNT = 256
+
 
 async def test_speed(
     max_workers: int,
@@ -13,7 +15,7 @@ async def test_speed(
 ):
     start_time = time()
     futures: list[Future[int]] = []
-    for num in range(100):
+    for num in range(TASK_COUNT):
         future = loop.run_in_executor(pool, square, num)
         futures.append(future)
     results = await asyncio.gather(*futures)
